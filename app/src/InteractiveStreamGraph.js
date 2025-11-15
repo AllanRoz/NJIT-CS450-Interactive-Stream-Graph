@@ -24,7 +24,7 @@ class InteractiveStreamGraph extends Component {
 
     svg_parent.attr("width", 500)
       .attr("height", 400)
-      .attr("transform", `translate(${-500}, ${100})`)
+      .attr("transform", `translate(${-500 - width / 2}, ${100})`)
 
     const svg = svg_parent.append("g")
       .attr("transform", `translate(${10}, ${20})`)
@@ -41,7 +41,7 @@ class InteractiveStreamGraph extends Component {
 
     const stackedGraph = d3.stack()
       .keys(llmModels)
-      .order(d3.stackOrderInsideOut)
+      .order(d3.stackOrderNone)
       .offset(d3.stackOffsetWiggle);
 
     const stackedData = stackedGraph(data);
@@ -55,7 +55,6 @@ class InteractiveStreamGraph extends Component {
       .tickValues(data.map((d, i) => i))
       .tickFormat(i => {
         const dateString = (chartData[i].Date).toString().substring(4, 7)
-        // console.log(dateString)
         return dateString;
       });
 
