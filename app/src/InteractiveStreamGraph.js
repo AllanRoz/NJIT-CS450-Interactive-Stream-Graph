@@ -117,8 +117,9 @@ class InteractiveStreamGraph extends Component {
       .style("position", "absolute")
       .style("padding", "8px")
       .style("background", "#e8e8e8")
-      .style("border", "2px solid black")
-      .style("border-radius", "10px")
+      .style("border", "1px solid black")
+      .style("border-radius", "6px")
+      .style("pointer-events", "none")
       .style("opacity", 0);
 
     const toolTipWidth = 250;
@@ -133,7 +134,7 @@ class InteractiveStreamGraph extends Component {
 
       .on("mousemove", function (event, layerData) {
         const model = layerData.key;
-        tooltip.style("opacity", 1).style("left", event.pageX + 200 + "px").style("top", event.pageY - 50 + "px");
+        tooltip.style("opacity", 1).style("left", event.pageX - 150 + "px").style("top", event.pageY + 20 + "px");
         tooltip.html("");
 
         tooltip.append("div")
@@ -183,8 +184,6 @@ class InteractiveStreamGraph extends Component {
 
 
         g.append("g").call(d3.axisLeft(boxYAxis).ticks(4));
-
-        tooltip.append("div").style("text-align", "center").style("margin-top", "4px").style("font-weight", "bold").text(model);
       })
       .on("mouseleave", () => {
         tooltip.style("opacity", 0);
