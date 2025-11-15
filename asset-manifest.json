@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github.io/NJIT-CS450-Interactive-Stream-Graph/static/css/main.0fe98b54.css",
+    "main.js": "/github.io/NJIT-CS450-Interactive-Stream-Graph/static/js/main.6c07e9b4.js",
+    "index.html": "/github.io/NJIT-CS450-Interactive-Stream-Graph/index.html",
+    "main.0fe98b54.css.map": "/github.io/NJIT-CS450-Interactive-Stream-Graph/static/css/main.0fe98b54.css.map",
+    "main.6c07e9b4.js.map": "/github.io/NJIT-CS450-Interactive-Stream-Graph/static/js/main.6c07e9b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fe98b54.css",
+    "static/js/main.6c07e9b4.js"
+  ]
+}
